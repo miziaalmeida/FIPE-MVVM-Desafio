@@ -21,7 +21,13 @@ class BrandsViewController: UIViewController {
 }
 
 extension BrandsViewController: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let screenModel = UIStoryboard(name: "Models", bundle: nil).instantiateInitialViewController() as? ModelsViewController{
+            
+            screenModel.idBrand = viewModel.getIdBrands(i: indexPath.row)
+            navigationController?.pushViewController(screenModel, animated: true)
+        }
+    }
 }
 
 extension BrandsViewController: UITableViewDataSource{
