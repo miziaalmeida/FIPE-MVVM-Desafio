@@ -22,5 +22,15 @@ class APIManager: ServiceProtocol{
         .resume()
     }
     
-    
+//    func loadData(path: String, onComplete: @escaping (Bool) -> Void){
+//        let session = URLSession.shared
+//        let url = URL(string: "https://parallelum.com.br/fipe/api/v1")!
+//        let task = session.dataTask(with: url, completionHandler: {data, response, error in
+//            print(error!)
+//            print(response!)
+//            print(data!)
+//        })
+//        task.resume()
+//    }
 }
+
