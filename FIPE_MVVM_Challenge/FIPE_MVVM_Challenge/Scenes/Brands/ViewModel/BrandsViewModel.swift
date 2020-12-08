@@ -24,6 +24,10 @@ class BrandsViewModel{
         return arrayBrands[i].name
     }
     
+    func getIdBrands(i: Int) -> String{
+        return arrayBrands[i].id
+    }
+    
     func openModal(storyboard: String, nameViewController: UIViewController){
         
     }
