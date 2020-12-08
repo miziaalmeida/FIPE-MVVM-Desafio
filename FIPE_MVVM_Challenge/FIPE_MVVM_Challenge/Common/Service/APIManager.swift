@@ -1,36 +1,23 @@
 import Foundation
 import UIKit
+import Alamofire
 
-class APIManager: ServiceProtocol{
-    func getData(url: URL, completion: @escaping (Result<Data, ServiceError>) -> Void) {
-        URLSession.shared.dataTask(with: url) { (data, _, error) in
-            if error != nil {
-                DispatchQueue.main.async {
-                    completion(.failure(ServiceError.unknown(error)))
+class APIManager{
+    var arrayData = [Car]()
+    var baseUrl = Environment.baseUrl
+    
+    func load(path: String, onComplete: @escaping (Bool) -> Void) {
+        AF.request("\(baseUrl)/\(path)").responseJSON { response in
+            if let json = response.value as? [[String: Any]] {
+                var brands = [Car]()
+                for item in json {
+                    brands.append(Car(fromDictionary: item))
                 }
-            }
-            guard let validData = data else{
-                DispatchQueue.main.async {
-                    completion(.failure(ServiceError.invalidData))
-                }
+                self.arrayData = brands
+                onComplete(true)
                 return
             }
-            DispatchQueue.main.async {
-                completion(.success(validData))
-            }
+            onComplete(false)
         }
-        .resume()
     }
-    
-//    func loadData(path: String, onComplete: @escaping (Bool) -> Void){
-//        let session = URLSession.shared
-//        let url = URL(string: "https://parallelum.com.br/fipe/api/v1")!
-//        let task = session.dataTask(with: url, completionHandler: {data, response, error in
-//            print(error!)
-//            print(response!)
-//            print(data!)
-//        })
-//        task.resume()
-//    }
 }
-

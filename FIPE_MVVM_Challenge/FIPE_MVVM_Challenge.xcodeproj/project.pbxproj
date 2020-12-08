@@ -19,6 +19,7 @@
 		19D19BCF257F091D008600EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19D19BCD257F091D008600EB /* Main.storyboard */; };
 		19D19BD1257F0920008600EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19D19BD0257F0920008600EB /* Assets.xcassets */; };
 		19D19BD4257F0920008600EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19D19BD2257F0920008600EB /* LaunchScreen.storyboard */; };
+		FD93A8AA5BADC4CC7DD9CED7 /* Pods_FIPE_MVVM_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2659028CD42AC45A5BB26AD0 /* Pods_FIPE_MVVM_Challenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,9 @@
 		19D19BD0257F0920008600EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19D19BD3257F0920008600EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19D19BD5257F0920008600EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2659028CD42AC45A5BB26AD0 /* Pods_FIPE_MVVM_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIPE_MVVM_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F384987AC5B5AD348A0B058 /* Pods-FIPE_MVVM_Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIPE_MVVM_Challenge.debug.xcconfig"; path = "Target Support Files/Pods-FIPE_MVVM_Challenge/Pods-FIPE_MVVM_Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		E037D2FDA2BA9EB613EF6A48 /* Pods-FIPE_MVVM_Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIPE_MVVM_Challenge.release.xcconfig"; path = "Target Support Files/Pods-FIPE_MVVM_Challenge/Pods-FIPE_MVVM_Challenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD93A8AA5BADC4CC7DD9CED7 /* Pods_FIPE_MVVM_Challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +85,8 @@
 			children = (
 				19D19BC6257F091D008600EB /* FIPE_MVVM_Challenge */,
 				19D19BC5257F091D008600EB /* Products */,
+				29B5FDF66BA14BFC2FC82A2C /* Pods */,
+				28A75DC497793619E4277FCC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +156,24 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		28A75DC497793619E4277FCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2659028CD42AC45A5BB26AD0 /* Pods_FIPE_MVVM_Challenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29B5FDF66BA14BFC2FC82A2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F384987AC5B5AD348A0B058 /* Pods-FIPE_MVVM_Challenge.debug.xcconfig */,
+				E037D2FDA2BA9EB613EF6A48 /* Pods-FIPE_MVVM_Challenge.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19D19BD8257F0920008600EB /* Build configuration list for PBXNativeTarget "FIPE_MVVM_Challenge" */;
 			buildPhases = (
+				55328B138F76347692B4C4A7 /* [CP] Check Pods Manifest.lock */,
 				19D19BC0257F091D008600EB /* Sources */,
 				19D19BC1257F091D008600EB /* Frameworks */,
 				19D19BC2257F091D008600EB /* Resources */,
+				AB08ECD4E1A3D9EB5E29F089 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,6 +240,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55328B138F76347692B4C4A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FIPE_MVVM_Challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB08ECD4E1A3D9EB5E29F089 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FIPE_MVVM_Challenge/Pods-FIPE_MVVM_Challenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FIPE_MVVM_Challenge/Pods-FIPE_MVVM_Challenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FIPE_MVVM_Challenge/Pods-FIPE_MVVM_Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		19D19BC0257F091D008600EB /* Sources */ = {
@@ -371,6 +440,7 @@
 		};
 		19D19BD9257F0920008600EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F384987AC5B5AD348A0B058 /* Pods-FIPE_MVVM_Challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -390,6 +460,7 @@
 		};
 		19D19BDA257F0920008600EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E037D2FDA2BA9EB613EF6A48 /* Pods-FIPE_MVVM_Challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -1,11 +1,17 @@
 import Foundation
 
-struct Car: Decodable{
-    let name: String
-    let id: String
+class Car: NSObject{
+    var name: String!
+    var id: String!
     
-    enum CodingKeys: String, CodingKey{
-        case name = "nome"
-        case id = "codigo"
+    init(fromDictionary dictionary: [String: Any]) {
+        id = dictionary["codigo"] as? String
+        name = dictionary["nome"] as? String
+        
+        if id == nil {
+            if let intId = dictionary["codigo"] as? Int {
+                id = "\(intId)"
+            }
+        }
     }
 }
