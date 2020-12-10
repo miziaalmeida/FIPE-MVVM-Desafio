@@ -1,7 +1,7 @@
 import UIKit
 
 class YearViewController: UIViewController {
-
+    
     @IBOutlet weak var tableViewYear: UITableView!
     
     var viewModel = YearViewModel()
@@ -23,7 +23,14 @@ class YearViewController: UIViewController {
 }
 
 extension YearViewController: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let screenDetails = UIStoryboard(name: "CarDetail", bundle: nil).instantiateInitialViewController() as? CarDetailViewController{
+            screenDetails.idBrand = idBrand
+            screenDetails.idModel = idModel
+            screenDetails.idYear = viewModel.getYear(i: indexPath.row)
+            navigationController?.pushViewController(screenDetails, animated: true)
+        }
+    }
 }
 
 extension YearViewController: UITableViewDataSource{

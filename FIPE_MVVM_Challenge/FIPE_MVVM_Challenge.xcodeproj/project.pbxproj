@@ -10,10 +10,10 @@
 		1935B3032581989600719798 /* YearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1935B3022581989600719798 /* YearViewController.swift */; };
 		1935B3062581989E00719798 /* Year.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1935B3052581989E00719798 /* Year.storyboard */; };
 		1935B309258198AB00719798 /* YearViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1935B308258198AA00719798 /* YearViewModel.swift */; };
-		1935B3132581A1CA00719798 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1935B3122581A1CA00719798 /* DetailsViewModel.swift */; };
-		1935B3172581A1E100719798 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1935B3162581A1E100719798 /* DetailsViewController.swift */; };
-		1935B31A2581A1F200719798 /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1935B3192581A1F200719798 /* Details.storyboard */; };
-		1935B31D2581A43600719798 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1935B31C2581A43600719798 /* Details.swift */; };
+		1935B31D2581A43600719798 /* CarDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1935B31C2581A43600719798 /* CarDetail.swift */; };
+		1935B328258268DA00719798 /* CarDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1935B327258268DA00719798 /* CarDetailViewModel.swift */; };
+		1935B32B258268E500719798 /* CarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1935B32A258268E500719798 /* CarDetailViewController.swift */; };
+		1935B32E258268EE00719798 /* CarDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1935B32D258268EE00719798 /* CarDetail.storyboard */; };
 		19B98EB8257F0B7900840114 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B98EB7257F0B7900840114 /* APIManager.swift */; };
 		19B98EC0257F0C8300840114 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B98EBF257F0C8300840114 /* Car.swift */; };
 		19B98EC4257F0D3A00840114 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B98EC3257F0D3A00840114 /* ServiceProtocol.swift */; };
@@ -36,10 +36,10 @@
 		1935B3022581989600719798 /* YearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearViewController.swift; sourceTree = "<group>"; };
 		1935B3052581989E00719798 /* Year.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Year.storyboard; sourceTree = "<group>"; };
 		1935B308258198AA00719798 /* YearViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearViewModel.swift; sourceTree = "<group>"; };
-		1935B3122581A1CA00719798 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
-		1935B3162581A1E100719798 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		1935B3192581A1F200719798 /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
-		1935B31C2581A43600719798 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
+		1935B31C2581A43600719798 /* CarDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetail.swift; sourceTree = "<group>"; };
+		1935B327258268DA00719798 /* CarDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewModel.swift; sourceTree = "<group>"; };
+		1935B32A258268E500719798 /* CarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewController.swift; sourceTree = "<group>"; };
+		1935B32D258268EE00719798 /* CarDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarDetail.storyboard; sourceTree = "<group>"; };
 		19B98EB7257F0B7900840114 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		19B98EBF257F0C8300840114 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		19B98EC3257F0D3A00840114 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
@@ -103,25 +103,25 @@
 		1935B30F2581A19C00719798 /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				1935B3112581A1A500719798 /* ViewModel */,
-				1935B3102581A1A200719798 /* View */,
+				1935B3252582683C00719798 /* ViewModel */,
+				1935B3242582683800719798 /* View */,
 			);
 			path = Details;
 			sourceTree = "<group>";
 		};
-		1935B3102581A1A200719798 /* View */ = {
+		1935B3242582683800719798 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1935B3162581A1E100719798 /* DetailsViewController.swift */,
-				1935B3192581A1F200719798 /* Details.storyboard */,
+				1935B32A258268E500719798 /* CarDetailViewController.swift */,
+				1935B32D258268EE00719798 /* CarDetail.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		1935B3112581A1A500719798 /* ViewModel */ = {
+		1935B3252582683C00719798 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				1935B3122581A1CA00719798 /* DetailsViewModel.swift */,
+				1935B327258268DA00719798 /* CarDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -245,7 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				19B98EBF257F0C8300840114 /* Car.swift */,
-				1935B31C2581A43600719798 /* Details.swift */,
+				1935B31C2581A43600719798 /* CarDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -335,10 +335,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1935B3062581989E00719798 /* Year.storyboard in Resources */,
-				1935B31A2581A1F200719798 /* Details.storyboard in Resources */,
 				19B98EE7258005C800840114 /* Models.storyboard in Resources */,
 				19D19BD4257F0920008600EB /* LaunchScreen.storyboard in Resources */,
 				19D19BD1257F0920008600EB /* Assets.xcassets in Resources */,
+				1935B32E258268EE00719798 /* CarDetail.storyboard in Resources */,
 				19D19BCF257F091D008600EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,22 +392,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1935B32B258268E500719798 /* CarDetailViewController.swift in Sources */,
 				19B98EB8257F0B7900840114 /* APIManager.swift in Sources */,
 				19D19BCC257F091D008600EB /* ViewController.swift in Sources */,
 				1935B309258198AB00719798 /* YearViewModel.swift in Sources */,
 				19B98EC4257F0D3A00840114 /* ServiceProtocol.swift in Sources */,
 				19B98ED0257FF2E700840114 /* BrandsViewModel.swift in Sources */,
+				1935B328258268DA00719798 /* CarDetailViewModel.swift in Sources */,
 				19B98EE0258005AF00840114 /* ModelsViewModel.swift in Sources */,
 				19B98EC8257F0E2100840114 /* Environment.swift in Sources */,
 				19D19BC8257F091D008600EB /* AppDelegate.swift in Sources */,
 				1935B3032581989600719798 /* YearViewController.swift in Sources */,
 				19B98EE4258005BF00840114 /* ModelsViewController.swift in Sources */,
 				19D19BCA257F091D008600EB /* SceneDelegate.swift in Sources */,
-				1935B3132581A1CA00719798 /* DetailsViewModel.swift in Sources */,
 				19B98ECB257F102C00840114 /* BrandsViewController.swift in Sources */,
 				19B98EC0257F0C8300840114 /* Car.swift in Sources */,
-				1935B31D2581A43600719798 /* Details.swift in Sources */,
-				1935B3172581A1E100719798 /* DetailsViewController.swift in Sources */,
+				1935B31D2581A43600719798 /* CarDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@ import Foundation
 //    Details.swift
 //    Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
-class Details : NSObject, NSCoding{
+class CarDetail : NSObject{
     
     var anoModelo : Int!
     var codigoFipe : String!
