@@ -9,6 +9,8 @@ class ModelsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor (red: 1.0, green: 0.5, blue: 0.0, alpha: 1.0)
+        
         tableViewModels.delegate = self
         tableViewModels.dataSource = self
         viewModel.id = idBrand

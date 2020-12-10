@@ -9,6 +9,8 @@ class BrandsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor (red: 1.0, green: 1.0, blue: 0.5, alpha: 1.0)
+        
         tableView.delegate = self
         tableView.dataSource = self
         

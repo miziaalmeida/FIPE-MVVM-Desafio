@@ -22,6 +22,7 @@ class CarDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(red: 1.5, green: 1.8, blue: 1.2, alpha: 1.0)
         
         viewModel.idBrand = idBrand
         viewModel.idModel = idModel

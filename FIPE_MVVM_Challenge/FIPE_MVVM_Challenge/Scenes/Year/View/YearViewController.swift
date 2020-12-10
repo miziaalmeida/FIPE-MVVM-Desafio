@@ -10,6 +10,7 @@ class YearViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor (red: 0.0, green: 1.5, blue: 0.0, alpha: 1.0)
         tableViewYear.delegate = self
         tableViewYear.dataSource = self
         
@@ -28,6 +29,7 @@ extension YearViewController: UITableViewDelegate{
             screenDetails.idBrand = idBrand
             screenDetails.idModel = idModel
             screenDetails.idYear = viewModel.getId(i: indexPath.row)
+            
             navigationController?.pushViewController(screenDetails, animated: true)
         }
     }
