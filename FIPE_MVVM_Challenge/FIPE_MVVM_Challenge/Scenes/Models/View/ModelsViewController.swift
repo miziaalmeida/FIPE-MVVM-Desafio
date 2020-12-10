@@ -1,7 +1,7 @@
 import UIKit
 
 class ModelsViewController: UIViewController {
-
+    
     @IBOutlet weak var tableViewModels: UITableView!
     
     var viewModel = ModelsViewModel()
@@ -20,7 +20,13 @@ class ModelsViewController: UIViewController {
 }
 
 extension ModelsViewController: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let screenYear = UIStoryboard(name: "Year", bundle: nil).instantiateInitialViewController() as? YearViewController{
+            screenYear.idBrand = idBrand
+            screenYear.idModel = viewModel.getId(i: indexPath.row)
+            navigationController?.pushViewController(screenYear, animated: true)
+        }
+    }
 }
 
 extension ModelsViewController: UITableViewDataSource{
