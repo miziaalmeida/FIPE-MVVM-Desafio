@@ -23,7 +23,7 @@ class CarDetailViewModel{
     }
     
     func getBrand() -> String {
-        return "Marca:\((carDetail?.marca)!)"
+        return "Marca: \((carDetail?.marca)!)"
     }
     
     func getModel() -> String {

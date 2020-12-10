@@ -27,7 +27,7 @@ extension YearViewController: UITableViewDelegate{
         if let screenDetails = UIStoryboard(name: "CarDetail", bundle: nil).instantiateInitialViewController() as? CarDetailViewController{
             screenDetails.idBrand = idBrand
             screenDetails.idModel = idModel
-            screenDetails.idYear = viewModel.getYear(i: indexPath.row)
+            screenDetails.idYear = viewModel.getId(i: indexPath.row)
             navigationController?.pushViewController(screenDetails, animated: true)
         }
     }
